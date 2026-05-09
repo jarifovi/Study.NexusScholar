@@ -78,15 +78,15 @@ include 'header.php';
 include 'sidebar.php';
 ?>
 
-<div class="page-title">
+<div class="page-title animate-gravity">
     <h1>CGPA Progress Tracker</h1>
     <p>Monitor your academic performance semester by semester.</p>
 </div>
 
-<div class="grid grid-2">
+<div class="grid grid-2 mt-3">
 
     <!-- LEFT CARD: ADD CGPA -->
-    <div class="glass-card">
+    <div class="glass-card animate-gravity delay-1">
         <h2>Add / Update CGPA</h2>
 
         <?php if ($message): ?>
@@ -119,7 +119,7 @@ include 'sidebar.php';
     </div>
 
     <!-- RIGHT CARD: CHART -->
-    <div class="glass-card">
+    <div class="glass-card animate-gravity delay-2">
         <h2>CGPA Progress Chart</h2>
 
         <div class="cgpa-chart-container">

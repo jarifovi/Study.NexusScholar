@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="auth-body">
 <div class="ambient-glow glow-1"></div>
 <div class="ambient-glow glow-2"></div>
-<div class="auth-card">
+<div class="auth-card glass-card">
     <h2><i class="fa-solid fa-user-plus" style="color:var(--primary); margin-right:10px;"></i> Create Account</h2>
     <?php if ($error): ?>
         <div class="alert error"><i class="fa-solid fa-circle-exclamation" style="margin-right:10px; font-size:18px;"></i> <?= htmlspecialchars($error) ?></div>

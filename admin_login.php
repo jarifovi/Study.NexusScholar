@@ -44,7 +44,7 @@ $page_title = "Admin Login";
 <body class="auth-body">
 <div class="ambient-glow glow-1"></div>
 <div class="ambient-glow glow-2"></div>
-<div class="auth-card">
+<div class="auth-card glass-card">
     <h2><i class="fa-solid fa-lock" style="color:var(--primary); margin-right:10px;"></i> Admin Login</h2>
 
     <?php if ($login_error): ?>

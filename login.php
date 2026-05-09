@@ -123,7 +123,7 @@ $page_title = "Login";
 <body class="auth-body">
 <div class="ambient-glow glow-1"></div>
 <div class="ambient-glow glow-2"></div>
-<div class="auth-card">
+<div class="auth-card glass-card">
     <h2 style="margin-bottom: 10px;"><i class="fa-solid fa-graduation-cap" style="color:var(--primary); margin-right:10px;"></i> Welcome Back</h2>
     <p style="margin-bottom: 30px; opacity: 0.8; text-align:center;">Use your email and password to continue.</p>
 

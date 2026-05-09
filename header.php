@@ -30,7 +30,12 @@ if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
 <body>
 <header class="navbar">
     <div class="navbar-left">
-        <div class="logo">🎓 NexusScholar</div>
+        <a href="dashboard.php" style="text-decoration: none;">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i>
+                <span>NexusScholar</span>
+            </div>
+        </a>
     </div>
 
     <div class="navbar-right">
