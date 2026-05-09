@@ -11,8 +11,16 @@
 <!-- Chatbot Window -->
 <div class="chatbot-window" id="chatbot-window">
     <div class="chatbot-header">
-        <span>StudyTrack Helper</span>
-        <button id="chatbot-close">&times;</button>
+        <div style="display:flex; flex-direction:column;">
+            <span style="font-weight:800; font-size:16px;">Nexus AI Mentor</span>
+            <select id="ai-persona" style="background:none; border:none; color:rgba(255,255,255,0.7); font-size:11px; padding:0; margin:0; outline:none; cursor:pointer;">
+                <option value="general" style="color:#000;">General Advisor</option>
+                <option value="stem" style="color:#000;">STEM Specialist</option>
+                <option value="business" style="color:#000;">MBA/Business Coach</option>
+                <option value="arts" style="color:#000;">Arts & Design Mentor</option>
+            </select>
+        </div>
+        <button id="chatbot-close" style="background:none; border:none; color:#fff; font-size:24px; cursor:pointer;">&times;</button>
     </div>
 
     <div class="chatbot-body" id="chatbot-body">

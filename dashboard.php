@@ -31,9 +31,29 @@ $page_title = "Dashboard";
 include 'header.php';
 include 'sidebar.php';
 ?>
-<div class="page-title">
+<div class="page-title animate-gravity">
     <h1>Dashboard</h1>
     <p>Overview of your study abroad readiness.</p>
+</div>
+
+<div class="glass-card animate-gravity mb-4" style="padding:20px; background:linear-gradient(90deg, rgba(16,185,129,0.1), rgba(56,189,248,0.1)); border:1px solid var(--border-glass-bright);">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; align-items:center; gap:20px;">
+            <div style="width:60px; height:60px; background:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; color:#fff; box-shadow:0 0 20px var(--primary-glow);">
+                L4
+            </div>
+            <div>
+                <h2 style="margin-bottom:5px; font-size:20px;">Global Scholar <span style="font-size:14px; color:var(--primary); font-weight:400; margin-left:10px;">450 / 600 XP</span></h2>
+                <div style="width:250px; height:8px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden;">
+                    <div style="width:75%; height:100%; background:linear-gradient(to right, var(--primary), var(--secondary)); box-shadow:0 0 10px var(--primary-glow);"></div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:right;">
+            <div style="font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Next Reward</div>
+            <div style="font-size:13px; font-weight:700; color:var(--accent);"><i class="fa-solid fa-gift"></i> Premium SOP Review</div>
+        </div>
+    </div>
 </div>
 
 <div class="grid grid-3">

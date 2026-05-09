@@ -15,13 +15,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Open / close handlers
     btnOpen.addEventListener('click', function () {
-        win.style.display = 'flex';
+        win.classList.add('open');
         input.focus();
     });
 
     btnClose.addEventListener('click', function () {
-        win.style.display = 'none';
+        win.classList.remove('open');
     });
+
+    const personaSelect = document.getElementById('ai-persona');
+    if (personaSelect) {
+        personaSelect.addEventListener('change', function() {
+            const persona = this.value;
+            let msg = "Hi! I'm your General Advisor. How can I help?";
+            if (persona === 'stem') msg = "Welcome! I'm your STEM Mentor. Ready to discuss Engineering, Tech, or Research?";
+            if (persona === 'business') msg = "Hello! I'm your Business Coach. Let's talk MBA, Management, and networking!";
+            if (persona === 'arts') msg = "Greetings! I'm your Arts Mentor. Let's explore Creative Portfolios and Design Schools!";
+            
+            body.innerHTML = '';
+            appendMessage(msg, 'bot');
+        });
+    }
 
     // Send on button click
     btnSend.addEventListener('click', function () {
