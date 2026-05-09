@@ -12,6 +12,9 @@
         <li><a class="nav-link" href="eligibility.php"><i class="fa-solid fa-star-half-stroke"></i> <span>Eligibility Calc</span></a></li>
         <li><a class="nav-link" href="financial_planner.php"><i class="fa-solid fa-coins"></i> <span>Financial Gap Analyzer</span></a></li>
         <li><a class="nav-link" href="document_vault.php"><i class="fa-solid fa-file-shield"></i> <span>Document Vault</span></a></li>
+        <li><a class="nav-link" href="kanban.php"><i class="fa-solid fa-table-columns"></i> <span>Application Tracker</span></a></li>
+        <li><a class="nav-link" href="visa_simulator.php"><i class="fa-solid fa-passport"></i> <span>Visa Simulator</span></a></li>
+        <li><a class="nav-link" href="uni_recommender.php"><i class="fa-solid fa-building-columns"></i> <span>University Recommender</span></a></li>
     </ul>
 </aside>
 <main class="content">
