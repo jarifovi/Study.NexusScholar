@@ -195,8 +195,28 @@ body {
     position: fixed;
     top: 80px;
     bottom: 0;
-    padding: 40px 20px;
+    padding: 20px 10px;
     z-index: 900;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 10px;
+}
+
+.sidebar-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin: 25px 20px 15px;
+    font-weight: 700;
+    opacity: 0.6;
 }
 
 .sidebar ul {
@@ -206,25 +226,28 @@ body {
 .sidebar .nav-link {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 16px 20px;
+    gap: 14px;
+    padding: 12px 20px;
     color: var(--text-muted);
     text-decoration: none;
-    border-radius: 16px;
-    margin-bottom: 8px;
+    border-radius: 14px;
+    margin-bottom: 4px;
     font-weight: 500;
+    font-size: 14px;
     transition: var(--transition);
 }
 
 .sidebar .nav-link i {
-    font-size: 20px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
     transition: var(--transition);
 }
 
 .sidebar .nav-link:hover, .sidebar .nav-link.active {
     background: rgba(16, 185, 129, 0.1);
     color: var(--primary);
-    transform: translateX(10px);
+    transform: translateX(8px);
 }
 
 .sidebar .nav-link:hover i {
