@@ -83,7 +83,17 @@ INSERT INTO scholarships
 (name, country, min_cgpa, min_ielts, stipend_per_month, description, requires_research_proposal, requires_financial_proof)
 VALUES
 ('DAAD Scholarship', 'Germany', 3.00, 6.5, 850, 'Excellent academic record, research proposal', 1, 1),
-('Australia Future Leaders Scholarship', 'Australia', 3.20, 7.0, 1000, 'Leadership and academic excellence', 0, 1);
+('Australia Future Leaders Scholarship', 'Australia', 3.20, 7.0, 1000, 'Leadership and academic excellence', 0, 1),
+('Fulbright Foreign Student Program', 'USA', 3.50, 7.5, 2500, 'Fully funded masters or PhD programs in the United States.', 1, 0),
+('Chevening Scholarship', 'UK', 3.30, 7.0, 1500, 'UK government’s global scholarship programme, funded by the Foreign, Commonwealth & Development Office.', 0, 0),
+('Vanier Canada Graduate Scholarships', 'Canada', 3.70, 7.5, 4166, 'The Vanier CGS program aims to attract and retain world-class doctoral students.', 1, 0),
+('Gates Cambridge Scholarship', 'UK', 3.80, 7.5, 1800, 'Scholarships for outstanding applicants from countries outside the UK to pursue a postgraduate degree at Cambridge.', 1, 0),
+('Erasmus Mundus Joint Masters', 'Europe', 3.20, 6.5, 1200, 'High-level integrated study programmes, at master level, delivered by an international partnership of HEIs.', 0, 0),
+('Knight-Hennessy Scholars', 'USA', 3.75, 7.5, 3000, 'The Knight-Hennessy Scholars program at Stanford University is a multidisciplinary community of future global leaders.', 0, 0),
+('MEXT Scholarship', 'Japan', 3.00, 6.0, 1300, 'Monbukagakusho scholarship sponsored by the Japanese government for international students.', 0, 0),
+('Destination Australia Scholarship', 'Australia', 3.00, 6.5, 1250, 'Support for international students to study in regional Australia.', 0, 1),
+('Lester B. Pearson International Scholarship', 'Canada', 3.80, 7.5, 2000, 'Scholarship for exceptional international students at the University of Toronto.', 0, 0),
+('Commonwealth Master’s Scholarship', 'UK', 3.50, 6.5, 1100, 'For candidates from low and middle income Commonwealth countries to undertake full-time taught Masters study.', 0, 1);
 
 -- IELTS questions (IELTS Practice)
 CREATE TABLE ielts_questions (
