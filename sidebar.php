@@ -10,6 +10,8 @@
         <li><a class="nav-link" href="moi_letter.php"><i class="fa-solid fa-file-pen"></i> <span>MOI Letter</span></a></li>
         <li><a class="nav-link" href="ielts_practice.php"><i class="fa-solid fa-book-open"></i> <span>IELTS Practice</span></a></li>
         <li><a class="nav-link" href="eligibility.php"><i class="fa-solid fa-star-half-stroke"></i> <span>Eligibility Calc</span></a></li>
+        <li><a class="nav-link" href="financial_planner.php"><i class="fa-solid fa-coins"></i> <span>Financial Gap Analyzer</span></a></li>
+        <li><a class="nav-link" href="document_vault.php"><i class="fa-solid fa-file-shield"></i> <span>Document Vault</span></a></li>
     </ul>
 </aside>
 <main class="content">
