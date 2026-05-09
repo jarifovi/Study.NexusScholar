@@ -58,6 +58,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <li><a class="nav-link <?= ($current_page == 'deadlines.php') ? 'active' : '' ?>" href="deadlines.php"><i class="fa-solid fa-hourglass-half"></i> <span>Deadlines</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'visa_hub.php') ? 'active' : '' ?>" href="visa_hub.php"><i class="fa-solid fa-passport"></i> <span>Visa Hub</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'visa_simulator.php') ? 'active' : '' ?>" href="visa_simulator.php"><i class="fa-solid fa-comments"></i> <span>Visa Simulator</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'support_tickets.php') ? 'active' : '' ?>" href="support_tickets.php"><i class="fa-solid fa-headset"></i> <span>Support Tickets</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'moi_letter.php') ? 'active' : '' ?>" href="moi_letter.php"><i class="fa-solid fa-file-pen"></i> <span>MOI Letter</span></a></li>
     </ul>
 </aside>
