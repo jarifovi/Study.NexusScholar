@@ -129,7 +129,17 @@ VALUES
 ('Listening','Easy','What time does the train leave?', '10:00 AM', '10:15 AM', '10:30 AM', '10:45 AM', 'B'),
 ('Writing','Hard','Discuss the pros and cons of remote work.', '', '', '', '', 'A'),
 ('Speaking','Medium','Describe a book you recently read.', '', '', '', '', 'A'),
-('Reading','Hard','The term "sustainable development" was popularized by...', 'The UN', 'The World Bank', 'Brundtland Report', 'Greenpeace', 'C');
+('Reading','Hard','The term "sustainable development" was popularized by...', 'The UN', 'The World Bank', 'Brundtland Report', 'Greenpeace', 'C'),
+('Listening','Medium','Where is the conference being held?', 'Main Hall', 'Exhibition Center', 'University Library', 'Town Hall', 'B'),
+('Listening','Hard','What is the speakers opinion on the new policy?', 'Strongly supports', 'Cautiously optimistic', 'Skeptical', 'Indifferent', 'C'),
+('Reading','Easy','The passage mentions that the climate in the region is...', 'Arid', 'Tropical', 'Temperate', 'Polar', 'C'),
+('Reading','Medium','Which paragraph discusses the economic impact?', 'Paragraph 2', 'Paragraph 4', 'Paragraph 5', 'Paragraph 7', 'B'),
+('Reading','Hard','In line 24, the word "mitigate" most nearly means...', 'Aggravate', 'Alleviate', 'Evaluate', 'Coordinate', 'B'),
+('Listening','Easy','How much is the membership fee?', '$25', '$40', '$50', '$60', 'C'),
+('Listening','Medium','The student needs to finish the assignment by...', 'Friday', 'Monday', 'Wednesday', 'Tuesday', 'B'),
+('Reading','Easy','True or False: The company was founded in 1995.', 'True', 'False', '', '', 'A'),
+('Reading','Medium','Which of the following was NOT mentioned as a benefit?', 'Cost-saving', 'Efficiency', 'Health', 'Speed', 'C'),
+('Reading','Hard','The author implies that the future of AI will depend on...', 'Regulation', 'Hardware', 'Data quality', 'Public trust', 'A');
 
 -- IELTS results
 CREATE TABLE ielts_results (
@@ -151,3 +161,77 @@ CREATE TABLE chat_logs (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
+
+-- University applications
+CREATE TABLE IF NOT EXISTS university_applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    university_name VARCHAR(150) NOT NULL,
+    country VARCHAR(100),
+    program VARCHAR(150),
+    stage ENUM('shortlisted','in_progress','submitted','accepted','rejected') DEFAULT 'shortlisted',
+    notes TEXT,
+    deadline DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Visa questions
+CREATE TABLE IF NOT EXISTS visa_questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question TEXT NOT NULL,
+    tip TEXT NOT NULL,
+    category VARCHAR(60) DEFAULT 'General'
+);
+
+INSERT INTO visa_questions (question, tip, category) VALUES
+('Why did you choose this specific university?', 'Research the universitys strong programs, global rankings, and faculty. Mention specific courses or professors that align with your goals.', 'Academics'),
+('Why do you want to study abroad instead of staying in your home country?', 'Emphasize global exposure, specialized programs not available locally, and your long-term career goals.', 'Motivation'),
+('What are your plans after completing your studies?', 'Always state your intention to return home and contribute to your countrys development. Mention specific career plans.', 'Post-Study'),
+('Who is funding your studies?', 'Be clear and confident. Mention your sponsor (parents, scholarship, self) and show financial documents if asked.', 'Financial'),
+('Have you previously applied for a visa to any country?', 'Be honest. If you had rejections, explain the reason and what has changed. Do not lie, as it can cause permanent bans.', 'History'),
+('What is your IELTS score and how will you manage language barriers?', 'State your score confidently, mention any English courses you have taken, and describe daily English usage habits.', 'Language'),
+('Do you have any relatives or friends in the destination country?', 'Being honest is key. If yes, clarify they will not influence you to stay illegally.', 'Personal'),
+('What is your accommodation arrangement?', 'Mention university dormitory, pre-arranged rental, or homestay. Having confirmed accommodation shows preparedness.', 'Logistics'),
+('What if your visa is rejected?', 'Explain that you would respect the decision and carefully review the reasons for rejection to see if you can address them in a future application.', 'Refusal'),
+('Can you name some of the modules in your chosen course?', 'Demonstrate that you have researched your program thoroughly by naming at least 3-4 specific subjects or modules.', 'Academic Research'),
+('Why did you not choose other countries like Canada or the UK?', 'Highlight unique aspects of the destination country, its industry specialization, or the specific university reputation.', 'Comparison'),
+('How will this degree help you in your home country?', 'Connect the skills you will gain to specific growing industries or challenges in your home country.', 'Career Goals'),
+('Do you plan to work while studying?', 'While you are allowed to work part-time (usually 20 hrs/week), emphasize that your primary focus is your education and that you have sufficient funds without working.', 'Intentions');
+
+-- Universities table
+CREATE TABLE IF NOT EXISTS universities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    min_cgpa DECIMAL(3,2) DEFAULT 0.00,
+    min_ielts DECIMAL(3,1) DEFAULT 0.0,
+    program_areas TEXT,
+    type ENUM('Safe','Target','Reach') DEFAULT 'Target'
+);
+
+INSERT INTO universities (name, country, min_cgpa, min_ielts, program_areas, type) VALUES
+('University of Melbourne', 'Australia', 3.50, 7.0, 'Engineering, Business, Medicine, Arts', 'Reach'),
+('Australian National University', 'Australia', 3.30, 6.5, 'Science, Law, Economics, Computing', 'Reach'),
+('Deakin University', 'Australia', 2.75, 6.0, 'Nursing, Business, IT, Education', 'Safe'),
+('RMIT University', 'Australia', 3.00, 6.5, 'Design, Engineering, Business', 'Target'),
+('TU Munich', 'Germany', 3.50, 6.5, 'Engineering, Computer Science, Physics', 'Reach'),
+('RWTH Aachen University', 'Germany', 3.20, 6.0, 'Engineering, Mathematics, Natural Sciences', 'Target'),
+('Heidelberg University', 'Germany', 3.30, 6.5, 'Medicine, Biology, Chemistry', 'Reach'),
+('Hochschule Munich', 'Germany', 2.80, 6.0, 'Applied Sciences, Business, Social Work', 'Safe'),
+('University of Toronto', 'Canada', 3.70, 7.5, 'Computer Science, Medicine, Law, Engineering', 'Reach'),
+('McGill University', 'Canada', 3.60, 7.0, 'Medicine, Arts, Science, Management', 'Reach'),
+('University of British Columbia', 'Canada', 3.40, 6.5, 'Sustainability, Forestry, Business, Engineering', 'Target'),
+('Seneca College', 'Canada', 2.50, 6.0, 'Applied Arts, Technology, Business', 'Safe'),
+('Humber College', 'Canada', 2.60, 6.0, 'Media, IT, Health Sciences', 'Safe'),
+('University of Oxford', 'UK', 3.85, 7.5, 'Philosophy, Politics, Medicine, Humanities', 'Reach'),
+('Imperial College London', 'UK', 3.75, 7.0, 'Science, Engineering, Medicine, Business', 'Reach'),
+('University of Manchester', 'UK', 3.20, 6.5, 'Physics, Social Sciences, Engineering', 'Target'),
+('Coventry University', 'UK', 2.70, 6.0, 'Automotive Design, Business, Arts', 'Safe'),
+('Stanford University', 'USA', 3.90, 7.5, 'CS, AI, Entrepreneurship, Law', 'Reach'),
+('Harvard University', 'USA', 3.95, 7.5, 'Law, Medicine, Business, Public Policy', 'Reach'),
+('UC Berkeley', 'USA', 3.65, 7.0, 'STEM, Social Sciences, Chemistry', 'Reach'),
+('Arizona State University', 'USA', 2.80, 6.5, 'Innovation, Business, Engineering', 'Safe'),
+('University of Tokyo', 'Japan', 3.50, 6.5, 'Physics, Engineering, Medicine', 'Reach'),
+('Kyoto University', 'Japan', 3.40, 6.0, 'Science, Philosophy, Agriculture', 'Reach'),
+('National University of Singapore', 'Singapore', 3.70, 7.0, 'CS, Data Science, Business, Bioengineering', 'Reach');
