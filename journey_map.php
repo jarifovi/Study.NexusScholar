@@ -12,7 +12,7 @@ include 'sidebar.php';
     <p>Visualize your path from preparation to graduation.</p>
 </div>
 
-<div class="glass-card animate-gravity delay-1 overflow-x-auto" style="padding: 60px 40px;">
+<div class="glass-card animate-gravity delay-1 overflow-x-auto" style="padding: 0;">
     <div class="journey-timeline">
         <div class="timeline-line"></div>
         
@@ -73,15 +73,15 @@ include 'sidebar.php';
 <style>
 .journey-timeline {
     position: relative;
-    padding-top: 50px;
-    min-width: 1200px; /* Force horizontal scroll on smaller screens */
+    padding: 60px 100px; /* Add horizontal padding to prevent cutoffs */
+    min-width: 1300px;
 }
 
 .timeline-line {
     position: absolute;
-    top: 90px;
-    left: 0;
-    right: 0;
+    top: 100px; /* Adjusted for perfect vertical center */
+    left: 100px;
+    right: 100px;
     height: 4px;
     background: rgba(255,255,255,0.05);
     z-index: 1;
@@ -95,7 +95,7 @@ include 'sidebar.php';
 }
 
 .timeline-node {
-    width: 220px;
+    width: 200px;
     text-align: center;
     position: relative;
 }
