@@ -50,6 +50,9 @@ if (!isset($page_title)) { $page_title = "Admin"; }
     <aside class="sidebar">
         <ul>
             <li><a href="admin_dashboard.php" class="nav-link"><i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span></a></li>
+            <li><a href="admin_heatmap.php" class="nav-link"><i class="fa-solid fa-earth-africa"></i> <span>Insight Heatmap</span></a></li>
+            <li><a href="admin_verification.php" class="nav-link"><i class="fa-solid fa-file-shield"></i> <span>Verification Terminal</span></a></li>
+            <li><a href="admin_broadcast.php" class="nav-link"><i class="fa-solid fa-tower-broadcast"></i> <span>Broadcast Center</span></a></li>
             <li><a href="admin_students.php" class="nav-link"><i class="fa-solid fa-users"></i> <span>Manage Students</span></a></li>
             <li><a href="admin_countries.php" class="nav-link"><i class="fa-solid fa-earth-americas"></i> <span>Manage Countries</span></a></li>
             <li><a href="admin_scholarships.php" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> <span>Manage Scholarships</span></a></li>
