@@ -213,7 +213,7 @@ body {
 }
 
 .sidebar .nav-link:hover, .sidebar .nav-link.active {
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(16, 185, 129, 0.1);
     color: var(--primary);
     transform: translateX(10px);
 }
@@ -301,12 +301,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.5), 0 0 20px var(--primary-glow);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5), 0 0 20px var(--primary-glow);
 }
 
 /* Form Styling */
@@ -334,7 +334,7 @@ input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--primary);
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
 }
 
 /* Tables */
@@ -474,7 +474,7 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
-/* Interactive Components styling additions */
+/* Interactive Components styling */
 .nav-icon {
     width: 45px;
     height: 45px;
@@ -495,24 +495,92 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 15px var(--primary-glow);
 }
 
+/* Dropdown Menu System */
 .dropdown-menu {
     position: absolute;
     top: 90px;
     right: 50px;
-    background: var(--bg-card);
-    backdrop-filter: var(--glass-blur);
+    background: rgba(10, 25, 20, 0.98);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     border: 1px solid var(--border-glass-bright);
-    border-radius: 20px;
-    width: 240px;
-    padding: 15px 0;
+    border-radius: 24px;
+    width: 320px;
+    padding: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: var(--transition);
-    z-index: 2000;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
 }
 
+.dropdown-header {
+    padding: 20px 25px;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-glass);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-item {
+    padding: 15px 25px;
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.dropdown-item:hover {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--primary);
+    padding-left: 30px;
+}
+
+/* Notification Specifics */
+.notif-menu {
+    width: 380px;
+}
+
+.notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notif-item {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border-glass);
+    font-size: 14px;
+    color: #e2e8f0;
+    transition: var(--transition);
+    line-height: 1.6;
+}
+
+.notif-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.notif-item strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.notif-footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Open Logic */
 .nav-icon.open + .dropdown-menu, 
 .profile-dropdown.open .dropdown-menu,
 .notification-dropdown.open .notif-menu {
@@ -536,7 +604,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 28px;
     color: #fff;
     cursor: pointer;
-    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
     z-index: 10000;
     transition: var(--transition);
 }
