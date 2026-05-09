@@ -162,6 +162,15 @@ body {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
 }
 
+.glass-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .glass-card::before {
     content: '';
     position: absolute;
@@ -258,22 +267,38 @@ body {
 /* Stat Cards */
 .stat-card {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px; /* Ensure consistent height */
 }
 
 .stat-card h3 {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: var(--text-muted);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .stat-value {
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 800;
+    line-height: 1;
+    margin: 10px 0;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.stat-card p:last-child {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 10px;
 }
 
 /* Grids */
@@ -311,10 +336,18 @@ body {
 
 /* Form Styling */
 label {
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
     color: var(--text-muted);
     font-weight: 600;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+label i {
+    color: var(--primary);
     font-size: 14px;
 }
 
@@ -594,19 +627,25 @@ input:focus, select:focus, textarea:focus {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    width: 70px;
-    height: 70px;
-    border-radius: 24px;
+    width: 65px;
+    height: 65px;
+    border-radius: 22px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 26px;
     color: #fff;
     cursor: pointer;
-    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
     z-index: 10000;
     transition: var(--transition);
+}
+
+.chatbot-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chatbot-window {
