@@ -54,6 +54,49 @@ include 'sidebar.php';
     </div>
 </div>
 
+<div class="grid grid-2 mt-3">
+    <div class="glass-card animate-gravity delay-4">
+        <h2><i class="fa-solid fa-earth-americas" style="color:var(--primary);"></i> Global Pulse</h2>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:15px; background:rgba(255,255,255,0.03); border-radius:20px;">
+            <div>
+                <span style="font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Target: London, UK</span>
+                <div style="font-size:32px; font-weight:800; color:var(--primary);" id="target-time">09:42 AM</div>
+            </div>
+            <div style="text-align:right;">
+                <i class="fa-solid fa-cloud-sun" style="font-size:32px; color:var(--accent); margin-bottom:5px;"></i>
+                <div style="font-size:18px; font-weight:700;">14°C</div>
+            </div>
+        </div>
+        <div class="mt-3" style="display:flex; gap:10px;">
+            <span class="badge badge-active" style="font-size:10px;">Visa Status: open</span>
+            <span class="badge badge-active" style="font-size:10px; background:rgba(56,189,248,0.1); color:var(--primary);">Flights: $850+</span>
+        </div>
+    </div>
+
+    <div class="glass-card animate-gravity delay-4">
+        <h2><i class="fa-solid fa-bolt" style="color:var(--warning);"></i> Elite Actions</h2>
+        <div class="grid grid-2" style="gap:15px;">
+            <a href="sop_architect.php" class="nav-link" style="margin:0; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2); justify-content:center; padding:15px;">
+                <i class="fa-solid fa-pen-nib"></i> <span style="display:inline;">SOP Builder</span>
+            </a>
+            <a href="visa_hub.php" class="nav-link" style="margin:0; background:rgba(129,140,248,0.1); border:1px solid rgba(129,140,248,0.2); justify-content:center; padding:15px;">
+                <i class="fa-solid fa-passport"></i> <span style="display:inline;">Visa Hub</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateTargetTime() {
+    const now = new Date();
+    const ukTime = new Date(now.getTime() - (5 * 60 * 60 * 1000));
+    const el = document.getElementById('target-time');
+    if (el) el.innerText = ukTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+}
+setInterval(updateTargetTime, 60000);
+updateTargetTime();
+</script>
+
 <a id="profile"></a>
 <div class="glass-card mt-3 animate-gravity delay-4">
     <h2><i class="fa-solid fa-user-pen" style="color:var(--primary); margin-right:10px;"></i> Edit Profile</h2>
