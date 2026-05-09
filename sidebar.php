@@ -7,6 +7,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="sidebar-category">Overview</div>
     <ul>
         <li><a class="nav-link <?= ($current_page == 'dashboard.php') ? 'active' : '' ?>" href="dashboard.php"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'achievements.php') ? 'active' : '' ?>" href="achievements.php"><i class="fa-solid fa-trophy"></i> <span>Achievements</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'journey_map.php') ? 'active' : '' ?>" href="journey_map.php"><i class="fa-solid fa-map-location-dot"></i> <span>Journey Map</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'vibe_matcher.php') ? 'active' : '' ?>" href="vibe_matcher.php"><i class="fa-solid fa-masks-theater"></i> <span>Uni Vibe Matcher</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'motivation_vault.php') ? 'active' : '' ?>" href="motivation_vault.php"><i class="fa-solid fa-fire"></i> <span>Motivation Vault</span></a></li>
@@ -58,6 +59,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <li><a class="nav-link <?= ($current_page == 'deadlines.php') ? 'active' : '' ?>" href="deadlines.php"><i class="fa-solid fa-hourglass-half"></i> <span>Deadlines</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'visa_hub.php') ? 'active' : '' ?>" href="visa_hub.php"><i class="fa-solid fa-passport"></i> <span>Visa Hub</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'visa_simulator.php') ? 'active' : '' ?>" href="visa_simulator.php"><i class="fa-solid fa-comments"></i> <span>Visa Simulator</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'audio_sandbox.php') ? 'active' : '' ?>" href="audio_sandbox.php"><i class="fa-solid fa-microphone-lines"></i> <span>Audio Sandbox</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'support_tickets.php') ? 'active' : '' ?>" href="support_tickets.php"><i class="fa-solid fa-headset"></i> <span>Support Tickets</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'moi_letter.php') ? 'active' : '' ?>" href="moi_letter.php"><i class="fa-solid fa-file-pen"></i> <span>MOI Letter</span></a></li>
     </ul>

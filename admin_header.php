@@ -59,6 +59,7 @@ if (!isset($page_title)) { $page_title = "Admin"; }
             <li><a href="admin_countries.php" class="nav-link"><i class="fa-solid fa-earth-americas"></i> <span>Manage Countries</span></a></li>
             <li><a href="admin_scholarships.php" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> <span>Manage Scholarships</span></a></li>
             <li><a href="admin_reports.php" class="nav-link"><i class="fa-solid fa-chart-line"></i> <span>Reports & Analytics</span></a></li>
+            <li><a href="admin_audit.php" class="nav-link"><i class="fa-solid fa-clipboard-list"></i> <span>Activity Audit Log</span></a></li>
         </ul>
     </aside>
 
