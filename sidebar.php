@@ -6,15 +6,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <ul>
         <li><a class="nav-link <?= ($current_page == 'dashboard.php') ? 'active' : '' ?>" href="dashboard.php"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'journey_map.php') ? 'active' : '' ?>" href="journey_map.php"><i class="fa-solid fa-map-location-dot"></i> <span>Journey Map</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'motivation_vault.php') ? 'active' : '' ?>" href="motivation_vault.php"><i class="fa-solid fa-fire"></i> <span>Motivation Vault</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'buddy_matcher.php') ? 'active' : '' ?>" href="buddy_matcher.php"><i class="fa-solid fa-users-viewfinder"></i> <span>Buddy Matcher</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'cgpa_tracker.php') ? 'active' : '' ?>" href="cgpa_tracker.php"><i class="fa-solid fa-chart-line"></i> <span>CGPA Tracker</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'standardized_tests.php') ? 'active' : '' ?>" href="standardized_tests.php"><i class="fa-solid fa-pen-to-square"></i> <span>Test Tracker</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'doc_scanner.php') ? 'active' : '' ?>" href="doc_scanner.php"><i class="fa-solid fa-expand"></i> <span>Doc Scanner (AI)</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'countries.php') ? 'active' : '' ?>" href="countries.php"><i class="fa-solid fa-globe"></i> <span>Country Guides</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'scholarships.php') ? 'active' : '' ?>" href="scholarships.php"><i class="fa-solid fa-graduation-cap"></i> <span>Scholarship Match</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'odds_predictor.php') ? 'active' : '' ?>" href="odds_predictor.php"><i class="fa-solid fa-bullseye"></i> <span>Scholarship Odds</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'uni_compare.php') ? 'active' : '' ?>" href="uni_compare.php"><i class="fa-solid fa-scale-balanced"></i> <span>Uni Comparison</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'city_battle.php') ? 'active' : '' ?>" href="city_battle.php"><i class="fa-solid fa-city"></i> <span>City Battle (COL)</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'uni_recommender.php') ? 'active' : '' ?>" href="uni_recommender.php"><i class="fa-solid fa-building-columns"></i> <span>Uni Recommender</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'sop_architect.php') ? 'active' : '' ?>" href="sop_architect.php"><i class="fa-solid fa-pen-nib"></i> <span>SOP Architect</span></a></li>
+        <li><a class="nav-link <?= ($current_page == 'lor_generator.php') ? 'active' : '' ?>" href="lor_generator.php"><i class="fa-solid fa-file-signature"></i> <span>LOR Generator</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'tone_analyzer.php') ? 'active' : '' ?>" href="tone_analyzer.php"><i class="fa-solid fa-masks-theater"></i> <span>SOP Tone Analyzer</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'roi_analytics.php') ? 'active' : '' ?>" href="roi_analytics.php"><i class="fa-solid fa-hand-holding-dollar"></i> <span>ROI Analytics</span></a></li>
         <li><a class="nav-link <?= ($current_page == 'ielts_practice.php') ? 'active' : '' ?>" href="ielts_practice.php"><i class="fa-solid fa-book-open"></i> <span>IELTS Practice</span></a></li>
